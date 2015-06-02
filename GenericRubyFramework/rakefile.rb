@@ -18,7 +18,7 @@ begin
     task :html => :spec
   end
   
-  task :default => :spec
+  #task :default => :spec
 rescue LoadError
   # no rspec available on machine
 end
