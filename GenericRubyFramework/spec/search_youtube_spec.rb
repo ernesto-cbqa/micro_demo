@@ -29,7 +29,6 @@ RSpec.describe "Search Video", :tr_id => '1' do
   
   after :example do |example|
     status = example.exception.nil? ? :Passed : :Failed
-    @stat= status
     # enable at will
     #post_to_test_rail(status, example.metadata[:tr_id], example.metadata[:tc_id])
   end
@@ -39,7 +38,6 @@ RSpec.describe "Search Video", :tr_id => '1' do
     @config_properties[:filename] = File.join(File.dirname(__FILE__), '..', 'report.html')
     Send_Mail.send_email(@config_properties[:email_recipients], @config_properties)
     @browser.close
-    post_to_test_rail(@status, example.metadata[:tr_id], example.metadata[:tc_id])
   end
  
 end
