@@ -13,6 +13,11 @@ begin
     task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html"]
   end
   
+  namespace :rspec_report do
+    desc 'Run all specs and generate RSpec report in HTML'
+    task :html => :spec
+  end
+  
   task :default => :spec
 rescue LoadError
   # no rspec available on machine
