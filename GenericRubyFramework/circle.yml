@@ -1,0 +1,22 @@
+##########################################
+#
+# Machine directives
+#
+##########################################
+
+machine:
+ ruby:
+  version: 2.2.0
+
+##########################################
+#
+# Test directives
+#
+##########################################
+
+test:
+  override:
+    - bundle exec rake spec[functional,parallel] --trace:
+        parallel: true
+        files:
+         - spec/**/*_spec.rb  
