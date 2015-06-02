@@ -20,7 +20,7 @@ RSpec.describe "Search Video", :tr_id => '1' do
     end
   end
  
-  it "should be unsuccessful if video does not exist", :tc_id => '1', :functional => true do
+  it "should be unsuccessful if video does not exist", :tc_id => '2', :functional => true do
     video_search = "guidespark plattform"   
     video_title = 'Introducing GuideSpark\'s Innovative Platform200'
     visit VideoSearch do |page|
