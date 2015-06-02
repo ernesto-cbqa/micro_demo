@@ -7,7 +7,6 @@ RSpec.describe "Search Video", :tr_id => '1' do
     @config_properties = config_properties_.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
     browser_type = @config_properties[:browser]
     @browser = Watir::Browser.new browser_type.to_sym
-
     video_search_page = VideoSearch.new @browser 
   end
   
@@ -30,7 +29,7 @@ RSpec.describe "Search Video", :tr_id => '1' do
   after :example do |example|
     status = example.exception.nil? ? :Passed : :Failed
     # enable at will
-    #post_to_test_rail(status, example.metadata[:tr_id], example.metadata[:tc_id])
+    post_to_test_rail(status, example.metadata[:tr_id], example.metadata[:tc_id])
   end
   
   after :context do
