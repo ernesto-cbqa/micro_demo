@@ -22,7 +22,7 @@ RSpec.describe "Search Video", :tr_id => '1' do
      video_search = "GuideSpark"   
      visit VideoSearch do |page|
        video_link = page.get_video_by_title(video_search, "GuideSpark200")
-       expect(video_link).to be nil
+       expect(video_link).to be exist
      end
   end
   
