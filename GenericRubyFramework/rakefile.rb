@@ -9,11 +9,11 @@ begin
     args.each do |entry|
       tag_list << " --tag #{entry}"
       puts tag_list 
-    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html"]
+    task.rspec_opts = [tag_list, "--color", "--format html --out report.html"]
     end
   end
   task :default => :spec
-  #Rake::Task['spec'].execute
+  
 rescue LoadError
   # no rspec available on machine
 end
