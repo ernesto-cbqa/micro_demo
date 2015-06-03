@@ -10,7 +10,7 @@ begin
       tag_list << " --tag #{entry}"
     end
     puts tag_list 
-    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html"]
+    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html", 'spec/**/*_spec.rb']
   end
   
   task :default => :spec
