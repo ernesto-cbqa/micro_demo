@@ -9,4 +9,5 @@ require 'gmail'
 
 require_all File.join(File.dirname(__FILE__), '..', 'lib')
 require_all File.join(File.dirname(__FILE__), '..', 'pageobjects')
+require_all File.join(File.dirname(__FILE__), '..', 'rspec_html_reports')
 
