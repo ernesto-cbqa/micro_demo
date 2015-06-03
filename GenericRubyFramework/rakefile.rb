@@ -8,9 +8,9 @@ begin
     puts args.inspect
     args.each do |entry|
       tag_list << " --tag #{entry}"
-      puts tag_list 
-    task.rspec_opts = [tag_list, "--color", "--format html --out report.html"]
     end
+    puts tag_list 
+    task.rspec_opts = [tag_list, "--color", "--format html --out report.html"]
   end
   task :default => :spec
   
