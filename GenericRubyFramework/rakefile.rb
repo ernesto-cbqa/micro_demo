@@ -10,7 +10,7 @@ begin
       tag_list << " --tag #{entry}"
     end
     puts tag_list 
-    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html"]
+    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format RspecHtmlFormatter --out report.html"]
   end
   
   namespace :rspec_report do
