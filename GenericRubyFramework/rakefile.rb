@@ -10,15 +10,11 @@ begin
       tag_list << " --tag #{entry}"
     end
     puts tag_list 
-    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format RspecHtmlFormatter"]
+    task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html"]
   end
   
-  namespace :rspec_report do
-    desc 'Run all specs and generate RSpec report in HTML'
-    task :html => :spec
-  end
-  
-  #task :default => :spec
+  task :default => :spec
+  Rake::Task['spec'].execute
 rescue LoadError
   # no rspec available on machine
 end
