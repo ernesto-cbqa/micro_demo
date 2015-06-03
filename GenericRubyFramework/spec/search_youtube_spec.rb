@@ -38,7 +38,7 @@ RSpec.describe "Search Video", :tr_id => '1' do
   
   after :context do
     @config_properties[:subject] = "Automation Result"
-    @config_properties[:filename] = File.join(File.dirname(__FILE__), '..', 'overview.html')
+    @config_properties[:filename] = File.join(File.dirname(__FILE__), '..', 'rspec_html_reports/overview.html')
     Send_Mail.send_email(@config_properties[:email_recipients], @config_properties)
     @browser.close
   end
