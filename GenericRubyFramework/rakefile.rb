@@ -8,13 +8,12 @@ begin
     puts args.inspect
     args.each do |entry|
       tag_list << " --tag #{entry}"
-    end
-    puts tag_list 
+      puts tag_list 
     task.rspec_opts = [tag_list, "--color", "--format documentation", "--format html --out report.html", 'hello_world_spec.rb']
+    end
   end
-  
   task :default => :spec
-  Rake::Task['spec'].execute
+  #Rake::Task['spec'].execute
 rescue LoadError
   # no rspec available on machine
 end
