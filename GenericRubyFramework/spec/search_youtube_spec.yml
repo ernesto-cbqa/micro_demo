@@ -1,4 +1,4 @@
 browser: firefox
-email_user: neto@cbqasolutions.com
-email_password: 1234
-email_recipients: neto@cbqasolutions.com
+email_user: qa@cbqasolutions.com
+email_password: cbqa123#
+email_recipients: qa@cbqasolutions.com
